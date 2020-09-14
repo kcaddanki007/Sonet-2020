@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        img{
+            border-style:solid;
+            border-radius: 8px;
+            border-width: 2px;
+           
+        }
+
+        h1{
+            color:crimson;
+            text-align:center;
+            font-family: fantasy;
+        }
+
+        /*ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        position: -webkit-sticky; 
+        position: sticky;
+        top: 0;
+        }
+
+        li {
+        float: left;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }*/
+
+        form {
+            margin: 12%;
+            margin-top: 10%;
+            width: 50%;
+        }
+        .formcontainer{
+            width: 350px;
+            height: 300px;
+            background-color:rgba(202, 201, 199, 0.24);
+            align-self: center;
+            border-style:solid;
+            border-radius: 8px;
+            border-width: 2px;
+            border-color:#525754;
+        }
+
+        .formheading{
+            text-align: center;
+            align-self: center;
+            color: rgb(119, 139, 139);
+            font-family: sans-serif;
+        }
+
+        .input-place-holder{
+            align-self: center;
+            width: 280px;
+            border-style:solid;
+            border-width: 1px;
+            border-color:#857c7c8c;
+            border-radius: 8px;
+            padding:8px;
+            margin: 10px 0px 0px 20px;
+            
+        }
+        
+        p{
+        margin: 0px 0px 0px 210px; 
+        font-size: 16px; 
+        color:rgba(107, 104, 99, 0.836);
+        }
+
+        body {
+  background-image: url("images/bgimage2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-info">
+        <a class="navbar-brand" href="#"><img src="images/kmitlogo.jpg" width="30" height="30" class="d-inline-block align-top" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="photogallery.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="flowers.html">Flowers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="lights.html">Lights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sun.html">Sun</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="colours.html">Colours</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav">
+            <a class="nav-link"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+              Login
+            </button></a>
+          </ul>
+        </div>
+      </nav>
+
+    
+   
+    
+    <h1>Galerie De Photos</h1>
+
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/sun4.jpeg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Sun</h5>
+              <p style="color:white;">The sun represents the duality of life. As he rises and falls he teaches us the ups and downs of life.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/flower2.jpeg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:navy;">Flowers</h5>
+              <p style="color:navy;">It takes patience for a bud to blossom to its beauty. Just the way it takes patience for us to reach higher levels. </p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/lights2.jpeg" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 >Lights</h5>
+              <p  style="color:white;">Lights are the literal embodiment of science. They are the reason we were able to conquer the nights.</p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  
+    </div>
+
+    <br>
+    <br>
+
+
+    <div class="container">
+    
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="colours.html"><img src="images\colorm.jpeg" width="100%" height="100%"></a>
+            </div>
+
+            <div class="col-sm-6">
+                <a href="sun.html"><img src="images\sunm.jpeg" width="100%" height="100%"></a>
+            </div>
+            
+           
+        </div>
+
+        <br>
+        <br>
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="flowers.html"><img src="images\flowerm.jpeg" width="100%" height="100%"></a>
+            </div>
+
+            <div class="col-sm-6">
+                <a href="lights.html"><img src="images\lightsm.jpeg" width="100%" height="100%"></a>
+            </div>
+
+        </div>
+    </div> 
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">User Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="formcontainer">
+              <h4 class="formheading">Login</h4>
+              <hr style="color: gray">
+              <input class="input-place-holder" type="text" name="username" placeholder="       Username">
+              <br><br>
+              <input class="input-place-holder" type="password" name="password" placeholder="       Password"><br>
+              <p>forgot password?</p>
+              <br><br>
+          </form>
+          
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">User Login</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    
+</body>
+</html>
