@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+
+<body>
+    <script>
+        var data = [
+    { name: "Krishna Chaitanya", email: "kc@gmail.com", pnumber: "1212121212", college: "KMIT" },
+    { name: "Amrutha", email: "amrutha@gmail.com", pnumber: "2323232323", college: "KMIT" },
+    { name: "Chinmaya", email: "chinmaya@gmail.com", pnumber: "3434343434", college: "TIET" },
+    { name: "Srujan",  email: "srujan@gmail.com", pnumber: "4545454545", college: "GITAM" },
+    { name: "Sahithi", email: "sahithi@gmail.com", pnumber: "5656565656", college: "SASTRA" },
+]
+
+document.write("<table border='1'>");
+document.write("<thead>");
+document.write("<th>");
+document.write("Name");
+document.write("</th>");
+document.write("<th>");
+document.write("Email");
+document.write("</th>");
+document.write("<th>");
+document.write("Phone Number");
+document.write("</th>");
+document.write("<th>");
+document.write("College");
+document.write("</th>");
+document.write("</thead>");
+for (var i = 0; i < data.length; i++) {
+    document.write("<tbody>");
+    document.write("<td>");
+    document.write(data[i].name);
+    document.write("</td>");
+    document.write("<td>");
+    document.write(data[i].email);
+    document.write("</td>");
+    document.write("<td>");
+    document.write(data[i].pnumber);
+    document.write("</td>");
+    document.write("<td>");
+    document.write(data[i].college);
+    document.write("</td>");
+    document.write("</tbody>");
+}
+document.write("</table");
+</script>
+</body>
+
+</html>
